@@ -1,4 +1,4 @@
-import { Body, Controller, HttpStatus, Logger, Post, Res, UseGuards } from '@nestjs/common'
+import { Body, Controller, HttpStatus, Post, Res, UseGuards } from '@nestjs/common'
 import { ApiOperation, ApiSecurity, ApiTags } from '@nestjs/swagger'
 
 import { ApiResult } from '~/common/decorators'
@@ -14,7 +14,6 @@ import { SearchService } from './search.service'
 @Controller('search')
 
 export class SearchController {
-  private readonly logger = new Logger(SearchController.name)
   constructor(private readonly searchService: SearchService, private readonly searchFilterService: SearchFilterService) {}
 
   @Post('/')
@@ -28,7 +27,6 @@ export class SearchController {
       const data = await this.searchService.searchImageFromBing(body.search)
       res.status(HttpStatus.OK).send(data)
     }
-    this.logger.log(`Searching for ${body.search} is prohibited`)
     res.status(HttpStatus.NOT_FOUND).send({ message: `No result found for ${body.search}, please try to search using other words` })
   }
 }
