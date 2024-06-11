@@ -1,1 +1,1 @@
-export declare function IdParam(): ParameterDecorator;
+export declare function IdParam(): any;

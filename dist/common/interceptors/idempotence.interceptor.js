@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.IdempotenceInterceptor = void 0;
 const common_1 = require("@nestjs/common");
@@ -86,7 +87,6 @@ let IdempotenceInterceptor = class IdempotenceInterceptor {
 exports.IdempotenceInterceptor = IdempotenceInterceptor;
 exports.IdempotenceInterceptor = IdempotenceInterceptor = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [core_1.Reflector,
-        cache_service_1.CacheService])
+    __metadata("design:paramtypes", [typeof (_a = typeof core_1.Reflector !== "undefined" && core_1.Reflector) === "function" ? _a : Object, cache_service_1.CacheService])
 ], IdempotenceInterceptor);
 //# sourceMappingURL=idempotence.interceptor.js.map

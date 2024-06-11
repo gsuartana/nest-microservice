@@ -15,6 +15,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 var SearchService_1;
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SearchService = void 0;
 const nestjs_redis_1 = require("@liaoliaots/nestjs-redis");
@@ -71,6 +72,6 @@ exports.SearchService = SearchService;
 exports.SearchService = SearchService = SearchService_1 = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, nestjs_redis_1.InjectRedis)()),
-    __metadata("design:paramtypes", [ioredis_1.default])
+    __metadata("design:paramtypes", [typeof (_a = typeof ioredis_1.default !== "undefined" && ioredis_1.default) === "function" ? _a : Object])
 ], SearchService);
 //# sourceMappingURL=search.service.js.map

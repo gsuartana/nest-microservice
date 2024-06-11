@@ -11,11 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CacheService = void 0;
 const cache_manager_1 = require("@nestjs/cache-manager");
 const common_1 = require("@nestjs/common");
 const redis_emitter_1 = require("@socket.io/redis-emitter");
+const cache_manager_2 = require("cache-manager");
 const socket_adapter_1 = require("../../../common/adapters/socket.adapter");
 const cache_constant_1 = require("../../../common/constants/cache.constant");
 const redis_util_1 = require("../../../common/utils/redis.util");
@@ -61,6 +63,6 @@ exports.CacheService = CacheService;
 exports.CacheService = CacheService = __decorate([
     (0, common_1.Injectable)(),
     __param(0, (0, common_1.Inject)(cache_manager_1.CACHE_MANAGER)),
-    __metadata("design:paramtypes", [Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof cache_manager_2.Cache !== "undefined" && cache_manager_2.Cache) === "function" ? _a : Object])
 ], CacheService);
 //# sourceMappingURL=cache.service.js.map

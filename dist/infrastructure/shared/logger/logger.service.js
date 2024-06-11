@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoggerService = exports.LogLevel = void 0;
 const common_1 = require("@nestjs/common");
@@ -88,6 +89,6 @@ let LoggerService = class LoggerService extends common_1.ConsoleLogger {
 exports.LoggerService = LoggerService;
 exports.LoggerService = LoggerService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [String, Object, config_1.ConfigService])
+    __metadata("design:paramtypes", [String, typeof (_a = typeof common_1.ConsoleLoggerOptions !== "undefined" && common_1.ConsoleLoggerOptions) === "function" ? _a : Object, typeof (_b = typeof config_1.ConfigService !== "undefined" && config_1.ConfigService) === "function" ? _b : Object])
 ], LoggerService);
 //# sourceMappingURL=logger.service.js.map
